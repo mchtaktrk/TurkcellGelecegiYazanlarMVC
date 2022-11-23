@@ -25,7 +25,7 @@ namespace MyAspNetCoreApp.Web.Controllers
             return View(productList);
         }
 
-        public IActionResult  Index2()
+        public IActionResult Index2()
         {
 
             var surName = TempData["surname"];
@@ -35,16 +35,16 @@ namespace MyAspNetCoreApp.Web.Controllers
 
 
 
-        public IActionResult  Index3()
+        public IActionResult Index3()
         {
             //veritabanı kaydetme işlemi
             return RedirectToAction("Index", "Ornek");
-          
+
         }
 
-        public IActionResult  ParametreView(int id)
+        public IActionResult ParametreView(int id)
         {
-            
+
             return RedirectToAction("JsonResultParametre", "Ornek", new { id = id });
 
         }
@@ -66,7 +66,7 @@ namespace MyAspNetCoreApp.Web.Controllers
 
         public IActionResult JsonResult()
         {
-           
+
             return Json(new { Id = 1, name = "kalem 1", price = 100 });
 
 
@@ -77,6 +77,6 @@ namespace MyAspNetCoreApp.Web.Controllers
             return new EmptyResult();
         }
 
-       
+
     }
 }
